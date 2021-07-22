@@ -1,14 +1,13 @@
-<nav>
-  <div class="nav-wrapper blue darken-1">
-    <a href="#" class="brand-logo left">Todos</a>
-    <ul id="nav-mobile" class="right ">
-
+<nav class="nav-extended">
+  <div class="nav-wrapper teal darken-1">
+    <a href="/" class="brand-logo left">Todos</a>
+    <a href="#" data-target="mobile-demo" class="right sidenav-trigger"><i class="material-icons">menu</i></a>
+    <ul id="nav-mobile" class="right">
       {{#if isIndex}}
       <li class="active"><a href="/">Todos</a></li>
       {{else}}
       <li><a href="/">Todos</a></li>
       {{/if}}
-
 
       {{#if isCreate}}
       <li class="active"><a href="/create">Create</a></li>
@@ -16,6 +15,20 @@
       <li><a href="/create">Create</a></li>
       {{/if}}
     </ul>
-    
   </div>
+  
 </nav>
+
+    <ul class="sidenav" id="mobile-demo">
+      {{#if isIndex}}
+      <li class="active"><a href="/">Todos</a></li>
+      {{else}}
+      <li><a href="/">Todos</a></li>
+      {{/if}}
+    
+      {{#if isCreate}}
+      <li class="active"><a href="/create">Create</a></li>
+      {{else}}
+      <li><a href="/create">Create</a></li>
+      {{/if}}
+    </ul>
